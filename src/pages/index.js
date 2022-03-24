@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Box, Container, Grid, Typography } from '@mui/material';
-import { Logement } from '../components/dashboard/logement';
+import { SideActions } from '../components/side-actions';
 import { Transport } from '../components/dashboard/transport';
 import { Alimentation } from '../components/dashboard/alimentation';
 import { Numerique } from '../components/dashboard/numerique';
@@ -14,6 +14,34 @@ import { ObjDuJour } from '../components/dashboard/obj-du-jour';
 import { TrafficByDevice } from '../components/dashboard/traffic-by-device';
 import { DashboardLayout } from '../components/dashboard-layout';
 import { bgcolor } from '@mui/system';
+
+const items = [
+  {
+    href: '/',
+    title: 'Logement',
+    color: '#F5D4F0'
+  },
+  {
+    href: '/',
+    title: 'Alimentation',
+    color:'#FFE4CF'
+  },
+  {
+    href: '/',
+    title: 'Transport',
+    color: '#D4EBF5'
+  },
+  {
+    href: '/',
+    title: 'Numérique',
+    color: '#FCE2DC'
+  },
+  {
+    href: '/',
+    title: 'Divers',
+    color: '#F8FAD2'
+  },
+]
 
 const Dashboard = () => (
   <>
@@ -30,13 +58,13 @@ const Dashboard = () => (
       }}
     >
       <Typography
-      
       color="textSecondary"
       variant="h1"
       margin={5}
       marginLeft={10}>
         Pierre le pd
       </Typography>
+
       <Container maxWidth={false}>
         <Grid
           item={12}
@@ -85,26 +113,15 @@ const Dashboard = () => (
               </Typography>
             </Grid> 
 
-            <Grid item xs={12}>
-              <Logement sx ={{bgcolor: '#F5D4F0'}} />
-            </Grid> 
-
-            <Grid item xs={12}>
-              <Transport sx ={{bgcolor: '#FFE4CF'}} />
-            </Grid> 
-
-            <Grid item xs={12}>
-              <Alimentation sx ={{bgcolor: '#D4EBF5'}} />
-            </Grid> 
-
-            <Grid item xs={12}>
-              <Numerique sx ={{bgcolor: '#FCE2DC'}} />
-            </Grid> 
-
-            <Grid item xs={12}>
-              <Divers sx ={{bgcolor: '#F8FAD2'}} />
-            </Grid> 
-
+            <Box sx={{ flexGrow: 1 }}>
+              {items.map((item) => (
+                <SideActions
+                  href={item.href}
+                  title={item.title}
+                />
+              ))}
+            </Box>
+            
           </Grid>
         </Grid>
       </Container>

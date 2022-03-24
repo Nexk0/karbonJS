@@ -31,7 +31,7 @@ const items = [
   },*/
   {
     href: '/products',
-    icon: (<ShoppingBagIcon fontSize="small" />),
+    icon: (<UserIcon fontSize="small" />),
     title: 'Profil'
   },/*
   {
@@ -43,7 +43,7 @@ const items = [
     href: '/settings',
     icon: (<CogIcon fontSize="small" />),
     title: 'Réglages'
-  },/*
+  },
   {
     href: '/login',
     icon: (<LockIcon fontSize="small" />),
@@ -54,6 +54,11 @@ const items = [
     icon: (<UserAddIcon fontSize="small" />),
     title: 'Register'
   },
+  {
+    href: '/quizz',
+    icon: (<UsersIcon fontSize="small" />),
+    title: 'Quizz'
+  },/*
   {
     href: '/404',
     icon: (<XCircleIcon fontSize="small" />),
