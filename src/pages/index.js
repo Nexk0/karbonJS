@@ -1,17 +1,9 @@
 import Head from 'next/head';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import { SideActions } from '../components/side-actions';
-import { Transport } from '../components/dashboard/transport';
-import { Alimentation } from '../components/dashboard/alimentation';
-import { Numerique } from '../components/dashboard/numerique';
-import { Divers } from '../components/dashboard/divers';
-import { LatestOrders } from '../components/dashboard/latest-orders';
-import { LatestProducts } from '../components/dashboard/latest-products';
 import { Emissions } from '../components/dashboard/Emissions';
 import { ProchRecomp } from '../components/dashboard/proch-recomp';
-import { TotalCustomers } from '../components/dashboard/total-customers';
 import { ObjDuJour } from '../components/dashboard/obj-du-jour';
-import { TrafficByDevice } from '../components/dashboard/traffic-by-device';
 import { DashboardLayout } from '../components/dashboard-layout';
 import { bgcolor } from '@mui/system';
 
@@ -62,7 +54,7 @@ const Dashboard = () => (
       variant="h1"
       margin={5}
       marginLeft={10}>
-        Pierre le pd
+        Bonjour, bonjour !
       </Typography>
 
       <Container maxWidth={false}>
@@ -118,6 +110,8 @@ const Dashboard = () => (
                 <SideActions
                   href={item.href}
                   title={item.title}
+                  color={item.color}
+                  bgcolor={item.color}
                 />
               ))}
             </Box>

@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import { Box, Container, Grid, Pagination, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import { products } from '../__mocks__/products';
-import { ProductListToolbar } from '../components/product/product-list-toolbar';
 import { ProductCard } from '../components/product/product-card';
 import { DashboardLayout } from '../components/dashboard-layout';
 
@@ -32,11 +31,11 @@ const Products = () => (
           container
         >
           <Grid
-            item xs={8}
+            item xs={12}
             container
             direction={"column"}
-            justifyContent="space"
             alignItems="center"
+            margin={5}
           >
             <Grid
               item xs={10}
@@ -60,12 +59,7 @@ const Products = () => (
               
             </Grid>
           </Grid>
-          <Grid
-            item xs={4}
-            container
-            spacing={3}
-          >
-          </Grid>
+          
         </Grid>
             
         <Box

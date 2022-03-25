@@ -5,18 +5,11 @@ import PropTypes from 'prop-types';
 import { Box, Button, Divider, Drawer, Typography, useMediaQuery } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { ChartBar as ChartBarIcon } from '../icons/chart-bar';
-import { Cog as CogIcon } from '../icons/cog';
 import { Lock as LockIcon } from '../icons/lock';
-import { Selector as SelectorIcon } from '../icons/selector';
-import { ShoppingBag as ShoppingBagIcon } from '../icons/shopping-bag';
 import { User as UserIcon } from '../icons/user';
 import { UserAdd as UserAddIcon } from '../icons/user-add';
 import { Users as UsersIcon } from '../icons/users';
-import { XCircle as XCircleIcon } from '../icons/x-circle';
-import { Logo } from './logo';
 import { NavItem } from './nav-item';
-import { Medal } from '../icons/medal.png'
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
 const items = [
   {
@@ -38,12 +31,12 @@ const items = [
     href: '/account',
     icon: (<UserIcon fontSize="small" />),
     title: 'Account'
-  },*/
+  },
   {
     href: '/settings',
     icon: (<CogIcon fontSize="small" />),
     title: 'Réglages'
-  },
+  },*/
   {
     href: '/login',
     icon: (<LockIcon fontSize="small" />),
@@ -140,7 +133,7 @@ export const DashboardSidebar = (props) => {
             color="neutral.100"
             variant="subtitle1"
           >
-            Nom du user
+            Super User
           </Typography>
           <Typography
             color="#94E60F"
@@ -160,13 +153,12 @@ export const DashboardSidebar = (props) => {
             }}
           >
             <img
-              alt="Go to pro"
-              src="/static/images/sidebar_pro.png"
+              alt="Avatar"
+              src="/static/images/cloudy-bonhomme.png"
             />
           </Box>
           <NextLink
-            href="https://material-kit-pro-react.devias.io/"
-            passHref
+            href="/"
           >
             <Button
               color="secondary"

@@ -2,15 +2,25 @@ import {Card, CardContent, Grid, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 
 
+
 export const SideActions = (props) => {
-  const { href, title, color} = props;
+  const {title, color} = props;
 
 
   return (
     <Card
       component="a"
-      sx={{ height: '100%', bgcolor: color }}
+      sx={{ 
+        height: '100%', 
+        borderRadius: 3,
+        display: 'flex',
+        backgroundColor: color,
+        margin: 3,
+        justifyContent: 'center'
+    }}
       {...props}
+      margin={3}
+      borderRadius={5}
     >
       <CardContent>
         <Grid

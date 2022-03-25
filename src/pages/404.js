@@ -7,7 +7,7 @@ const NotFound = () => (
   <>
     <Head>
       <title>
-        404 | Material Kit
+        404 | Karbon
       </title>
     </Head>
     <Box
@@ -32,15 +32,15 @@ const NotFound = () => (
             color="textPrimary"
             variant="h1"
           >
-            404: The page you are looking for isn’t here
+            Cette page n'existe pas, revenez en lieu sûr !
           </Typography>
           <Typography
             align="center"
             color="textPrimary"
             variant="subtitle2"
           >
-            You either tried some shady route or you came here by mistake.
-            Whichever it is, try using the navigation
+            Vous avez emprunté un chemin ombreux, ou vous vous êtes égarés. 
+            Quoi qu'il en soit, on peut vous ramener en terrain connu.
           </Typography>
           <Box sx={{ textAlign: 'center' }}>
             <img
@@ -64,7 +64,7 @@ const NotFound = () => (
               sx={{ mt: 3 }}
               variant="contained"
             >
-              Go back to dashboard
+              Revenir à la page principale
             </Button>
           </NextLink>
         </Box>
